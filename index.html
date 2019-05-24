@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>我的个人主页</title>                <!-- 设置标题 -->
+		<link rel="stylesheet" href="css/intro.css"/>
+		<link rel="shortcut icon" href="img/闪电.ico" type="img/x-icon" />  <!-- 设置icon图标 -->
+	</head>
+	<body>
+		<div class="bgc">
+				<nav>                             <!-- 导航栏 -->
+						<ul>
+							<li>
+								<a href="#part1">首页</a>   <!-- 设置点击跳转至part1 -->
+							</li>
+							<li>
+								<a href="#part2">个人简介</a>   <!-- 设置点击跳转至part2 -->  
+							</li>
+							<li>
+								<a href="#part3">技能</a>   <!-- 设置点击跳转至part3 -->
+							</li>
+						</ul>
+				</nav>
+				<div class="middle w" id="part1">          <!-- 头像部分 -->
+						<div class="photo">
+							<img class="picture" src="img/doge.jpg" />
+						</div>
+				</div>                    
+				<div class="title" id="part2">              <!-- 作为跳转的标签 -->
+					personal information:
+				</div>
+				<div class="myintroduce">                   <!-- 个人信息部分 -->
+						<header>
+							<ul>
+								<li class="choose">
+									个人资料
+								</li>
+								<li class="choose">
+									兴趣爱好
+								</li>
+							</ul>
+						</header>
+						<div class="content">
+							<ul id="show">
+								<li>
+									<section>
+										<h1>
+											姓名：
+										</h1>
+										<p>李晨星</p>
+										<h1>
+											电子邮件：
+										</h1>
+										<p>1042909647@qq.com</p>
+										<h1>
+											QQ：
+										</h1>
+										<p>1042909647</p>
+										<h1>
+											学校：
+										</h1>
+										<p>华中科技大学软院</p>
+									</section>
+								</li>
+								<li>
+									<section>
+										<h1>
+											爱好：
+										</h1>
+										<p>踢足球</p>
+										<p>打游戏</p>
+										<p>做网页</p>
+									</section>
+								</li>
+							</ul>
+						</div>
+				</div>
+				<div class="title" id="part3">
+					my skill:
+				</div>
+				<div class="myskill">                        <!-- 技能部分 -->
+						<header id="part3">
+								<ul>
+									<li class="skill">
+										技能
+									</li>
+								</ul>
+						</header>
+						<div class="skillcontent">
+							<div class="skillsection">
+									<h1>技能：</h1>
+									<p>
+										C语言，java，javascript+html+css
+									</p>
+							</div>
+							
+						</div>
+				</div>
+				<footer>
+					<p>footer</p>
+				</footer>
+				
+		</div>
+
+		<script>
+			var show=document.getElementById("show");
+			var allA=document.getElementsByClassName("choose");
+
+			for(var i=0; i<allA.length; i++){      /*设置选中的header变换颜色，同时更换section，这里是通过改变绝对定位的left值来实现更换的*/
+				allA[i].num=i;
+				
+				allA[i].onclick=function(){
+					
+					index=this.num;
+					show.style.left=(-1191)*index+"px";
+//					设置选中的A
+					setA();
+					
+				}
+			}
+			
+			function setA(){                       /*更换颜色函数*/
+				for(var i=0; i<allA.length; i++){
+					allA[i].style.backgroundColor="rgb(56, 53, 53)";
+				}
+				
+				allA[index].style.backgroundColor="grey";
+				
+			}
+			
+		</script>
+	</body>
+</html>

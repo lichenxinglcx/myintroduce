@@ -1,0 +1,220 @@
+*{               /*清除浏览器的默认样式，'*'为全选*/
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: #f6f6f6;
+}
+/*公共类*/
+.fl{
+	float: left;   /*左浮动，脱离文档流，用来将块级元素在一行从左往右显示*/
+}
+
+.fr{
+	float: right;  /*右浮动，脱离文档流，用来将块级元素在一行从右往左显示*/
+}
+ul,h1{             /*清除默认样式*/
+	margin: 0;
+	padding: 0;
+}
+
+h1,p{
+	margin: 20px 0 20px 20px !important;/*！important将优先级设置为最高*/
+}
+
+
+ul{
+	
+	list-style: none; /*清除无序列表的默认样式*/
+}
+
+.bgc{
+	width: 100%;
+	height: 1550px;
+	background: url(../img/bigbgc.jpg);/*添加背景图片*/
+	background-attachment: fixed;      /*固定背景图片不随滚动条滚动*/
+	padding-bottom: 40px;
+}
+
+a{
+	text-decoration: none;          /*清除超链接默认样式*/
+	color: #999;
+	font-size:12px;
+}
+
+a:hover{
+	color: #f10215;                /*设置鼠标悬浮的文字颜色*/
+}
+
+.w{
+	width: 1190px;                   /*设置版心宽度*/
+	margin: 0 auto;                  /*版心居中*/
+	height: 300px;
+	background: url(../img/bgc.jpg);
+	border:1px solid #999;          /*添加边框*/
+	border-radius: 10px;			/*添加边框曲率，使其变圆滑*/
+	position: relative;             /*设置相对定位，为后面的绝对定位做基础*/
+}
+
+
+
+
+
+nav{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;                 /*设置行高等于高，使文字上下居中*/
+	background-color: black;
+	padding-left: 500px;
+	position: fixed;                    /*固定导航栏的位置*/
+	z-index: 1;                         /*使导航栏总在最外层显示，不被遮盖*/
+	border:3px solid rgb(56, 53, 53);
+	border-radius: 8px;
+}
+
+nav li{
+	float: left;
+	padding: 0 50px 0;
+	
+}
+
+nav li:hover{                          /*改变鼠标悬浮的背景颜色*/
+	background-color: grey;
+}
+
+nav li a{
+	font-size: 15px;
+	font-weight: 7000;
+	color:white;
+}
+
+nav li a:hover{
+	color: #F10215;
+}
+
+.photo{
+	width: 150px;
+	height: 150px;
+	border: 1px solid #f6f6f6;
+	border-radius: 150px;
+	position:absolute;                   /*由于需要精确的位置，这里使用绝对定位，是以上一个相对定位元素为基准的*/  
+	top: 80px;
+	left: 500px;
+}
+
+.picture{
+	width: 100%;
+	height: 100%;
+	border-radius: 150px;
+}
+
+header{
+	height: 40px;
+	background-color: #4b4848;
+	width: 1190px;
+	margin: 10px auto 0;
+	line-height: 40px;
+	border:3px solid rgb(56, 53, 53);
+	border-radius: 8px;
+}
+
+header li{
+	float: left;
+	padding: 0 267px 0;
+	font-size: 15px;
+	font-weight: 7000;
+	color:white;
+}
+
+
+header li:hover{
+	background-color: grey;
+}
+
+
+
+section{
+	width: 1190px;
+	height:500px;
+	margin: 0 auto;
+	line-height: 40px;
+	background: url(../img/introbgc5.png);
+	color: black;
+	float: left;                        /*将自我介绍的两个section并排显示，方便后续的切换*/
+}
+
+#show{
+	width: 2400px;
+	position: relative;
+}
+
+.content{                                /*这里的content是section的显示框*/
+	width: 1190px;
+	left: 165px; 
+	overflow: hidden;                   /*将超出显示框的部分隐藏，当显示第一个section时，隐藏第二个section*/
+	position: absolute; 
+	border: 3px solid #4b4848;
+	border-radius: 8px;
+}
+
+.myintroduce{
+	width: 1190px;
+	height: 550px;
+	margin: 0 auto 0; 
+}
+
+.title{
+	width: 1190px;
+	margin: 5px auto 5px;
+	font-size: 50px;
+	font-family: yishuziti;            /*加入你规定的艺术字体*/
+	padding-left: 600px;
+}
+
+@font-face {               /*外部引入艺术字体，将下载好的ttf文件放入font目录，此处为定义该艺术字体*/
+	/* 字体名称随意起 */
+	font-family: yishuziti;
+	/*你下载字体所在的位置*/
+	src: url('./font/Citadel\ Script.ttf');
+}
+
+.skill{
+	padding: 0 580px 0;
+}
+
+.skillcontent{
+	background: url(../img/skillbgc.jpg) no-repeat;
+    background-size: cover;
+    width: 1190px;
+    height: 400px;
+	position: relative;
+	margin: 0 auto 0;
+	border: 3px solid #4b4848;
+	border-radius: 8px;
+}
+
+ .skillsection{             /* 通过定位加设置背景颜色改变背景图片透明度，但效果不太好 */
+	position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 1190px;
+    height: 400px;
+    background:rgba(255, 255, 255, 0.3);
+
+}
+
+footer{                         /*设置footer*/
+	width: 100%;
+	height: 40px;
+	background-color: black;
+	line-height: 0px;
+	color: white;
+	margin-top: 80px;
+	border: 3px solid #4b4848;
+	border-radius: 8px;
+}
+
+
